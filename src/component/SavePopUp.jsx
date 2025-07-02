@@ -35,7 +35,7 @@ function SavePopUp({ open, onClose }) {
             Access all your favourites in one click and enjoy our best offers
           </p>
         </div>
-        <div className="w-full flex gap-6 justify-center self-stretch">
+        <div className="w-full flex flex-col md:flex-row gap-6 justify-center self-stretch">
           <a href="#" className={`${$btn} bg-yellow-400 hover:bg-yellow-500`}>
             View my favourites
           </a>

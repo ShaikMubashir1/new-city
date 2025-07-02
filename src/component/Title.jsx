@@ -11,13 +11,15 @@ export default function Title() {
   const [show, setShow] = useState(false);
 
   const $btn =
-    " flex justify-center bg-white py-3 px-5 text-xs h-fit font-medium hover:text-violet-400 gap-1 items-start";
+    " flex justify-center bg-white md:py-3 md:px-5 p-2 rounded-full text-xs h-fit font-medium hover:text-violet-400 gap-1 md:shadow-none shadow-3xl items-start";
   return (
     <div className="flex justify-between mt-4  md:mt-0 md:mb-8 md:mx-0 md:order-2 ">
       <div className="">
-        <h1 className="font-bold text-4xl ">YOTEL New York Times Square</h1>
+        <h1 className=" text-start font-bold md:text-4xl text-2xl">
+          YOTEL New York Times Square
+        </h1>
       </div>
-      <div className=" flex justify-between ">
+      <div className=" flex justify-between md:gap-0 gap-3">
         <div className=" relative">
           <button
             className={`${$btn}`}
@@ -26,9 +28,9 @@ export default function Title() {
             }}
           >
             <BsSend className="w-4 h-4" />
-            <span> Share</span>
+            <span className=" hidden md:block"> Share</span>
           </button>
-          <SharePopUp show={show} />
+          <SharePopUp show={show} onCloseShow={() => setShow(false)} />
         </div>
         <button
           className={$btn}
@@ -42,7 +44,7 @@ export default function Title() {
           ) : (
             <CiHeart className="w-4 h-4" />
           )}
-          <span> Save</span>
+          <span className=" hidden md:block"> Save</span>
         </button>
       </div>
       <SavePopUp open={open} onClose={() => setOpen(false)} />

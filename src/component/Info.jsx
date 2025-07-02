@@ -5,9 +5,10 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 function Info() {
   const $div = "rounded-lg shadow-3xl w-full p-6";
   const $title = "mb-4 text-lg font-semibold";
-  const $text = "text-sm/[22px] text-stone-600 font-medium tracking-wider";
+  const $text =
+    "text-sm/[22px] text-stone-600 font-medium tracking-wider text-start";
   const $img = "w-4 h-4 mt-1";
-  const $list = " flex justify-between gap-5";
+  const $list = " flex justify-between md:justify-start gap-5";
   return (
     <div className=" flex my-6 lg:flex-row flex-col text-start gap-6">
       <div className={$div}>
@@ -67,8 +68,8 @@ function Info() {
               </p>
             </li>
           </ul>
-          <div className="w-[300px] h-[155px]">
-            <div className=" flex justify-center rounded-xl m-auto h-full items-center align-middle bg-[url('https://dayuse.twic.pics/map/map-sunrise-brand.jpg')] bg-cover bg-no-repeat bg-center ">
+          <div className="md:w-[300px] md:h-[155px]">
+            <div className=" flex justify-center rounded-xl m-auto h-full items-center align-middle md:bg-[url('https://dayuse.twic.pics/map/map-sunrise-brand.jpg')] bg-cover bg-no-repeat bg-center ">
               <button className=" bg-white shadow-3xl py-3 px-5 rounded-full text-xs/[12px] h-fit font-medium hover:bg-slate-50">
                 View map
               </button>
