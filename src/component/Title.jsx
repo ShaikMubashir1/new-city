@@ -3,10 +3,12 @@ import { BsSend } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { FcLike } from "react-icons/fc";
 import SavePopUp from "./SavePopUp";
+import SharePopUp from "./SharePopUp";
 
 export default function Title() {
   const [open, setOpen] = useState(false);
   const [change, setChange] = useState(false);
+  const [show, setShow] = useState(false);
 
   const $btn =
     " flex justify-center bg-white py-3 px-5 text-xs h-fit font-medium hover:text-violet-400 gap-1 items-start";
@@ -16,10 +18,18 @@ export default function Title() {
         <h1 className="font-bold text-4xl ">YOTEL New York Times Square</h1>
       </div>
       <div className=" flex justify-between ">
-        <button className={$btn}>
-          <BsSend className="w-4 h-4" />
-          <span> Share</span>
-        </button>
+        <div className=" relative">
+          <button
+            className={`${$btn}`}
+            onClick={() => {
+              setShow(!show);
+            }}
+          >
+            <BsSend className="w-4 h-4" />
+            <span> Share</span>
+          </button>
+          <SharePopUp show={show} />
+        </div>
         <button
           className={$btn}
           onClick={() => {
