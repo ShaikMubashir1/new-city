@@ -10,7 +10,7 @@ function SelectDate() {
   const month = date.toLocaleString("en-US", { month: "long" });
   const day = date.toLocaleString("en-US", { day: "2-digit" });
   return (
-    <div className=" mt-8 rounded-2xl bg-stone-50">
+    <div className=" mt-8 mb-8 rounded-2xl bg-stone-50">
       <div className="bg-gradient-to-r from-amber-400 from-20% via-orange-500 via-40% to-teal-200 to-60% rounded-t-2xl h-[54px] md:h-[46px] flex justify-center items-center">
         <p className=" uppercase tracking-widest text-sm">Select your day</p>
       </div>

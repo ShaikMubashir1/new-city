@@ -1,5 +1,5 @@
 import "./App.css";
-import Booking from "./component/Booking";
+import Booking from "./component/StandardbookingSection/Booking";
 import HeroBanner from "./component/HeroBanner";
 import Info from "./component/Info";
 import SelectBar from "./component/SelectBar";

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { FcLike } from "react-icons/fc";
@@ -14,10 +15,14 @@ export default function Title() {
     " flex justify-center bg-white md:py-3 md:px-5 p-2 rounded-full text-xs h-fit font-medium hover:text-violet-400 gap-1 md:shadow-none shadow-3xl items-start";
   return (
     <div className="flex justify-between mt-4  md:mt-0 md:mb-8 md:mx-0 md:order-2 ">
-      <div className="">
+      <div className=" flex flex-wrap gap-1">
         <h1 className=" text-start font-bold md:text-4xl text-2xl">
           YOTEL New York Times Square
         </h1>
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
       </div>
       <div className=" flex justify-between md:gap-0 gap-3">
         <div className=" relative">
