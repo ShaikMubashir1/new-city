@@ -1,3 +1,5 @@
+import { RiAppsFill } from "react-icons/ri";
+
 export default function HeroBanner() {
   const $img =
     "object-cover m-auto cursor-pointer rounded-2xl h-[213px] w-full";
@@ -10,7 +12,7 @@ export default function HeroBanner() {
           className={`${$img} h-[450px]`}
         />
       </div>
-      <div className="md:w-1/3 hidden lg:block space-y-6 h-[450px] ml-6">
+      <div className="md:w-1/3 hidden lg:block space-y-6 h-[450px] ml-6 relative">
         <img
           src="https://dayuse.twic.pics/hotels/16035/65acdcdd39f9addaf7b2d237b396c894-yotel-new-york-city.jpg?twic=v1/cover=640/quality=75"
           alt=""
@@ -21,6 +23,10 @@ export default function HeroBanner() {
           alt=""
           className={$img}
         />
+        <button className="flex justify-center select-none items-center text-black bg-white cursor-pointer  rounded-full py-3 px-5 absolute gap-x-1 bottom-4 right-4 p-3 font-medium text-xs/3 hover:bg-slate-100 ">
+          <RiAppsFill className="h-4 w-4" />
+          See photos
+        </button>
       </div>
     </div>
   );

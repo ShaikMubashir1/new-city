@@ -1,6 +1,7 @@
 import { MdHomeFilled } from "react-icons/md";
 import { BiSolidMessageRoundedCheck } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useState } from "react";
 
 function Info() {
   const $div = "rounded-lg shadow-3xl w-full p-6";
@@ -9,45 +10,37 @@ function Info() {
     "text-sm/[22px] text-stone-600 font-medium tracking-wider text-start";
   const $img = "w-4 h-4 mt-1";
   const $list = " flex justify-between md:justify-start gap-5";
+
+  const $Details = [
+    {
+      $Img: "https://dayuse.twic.pics/new-brand-hotel-highlight-icon/room.png?twic=v1/cover=48/quality=75",
+      $Text:
+        "Get cozy in your super comfy room with the ability to play music in your soothing Monsoon shower, a heated shower rack and a snuggly bed to relax.",
+    },
+    {
+      $Img: "https://dayuse.twic.pics/new-brand-hotel-highlight-icon/bar.png?twic=v1/cover=48/quality=75",
+      $Text:
+        "Head up high to one of the city’s largest hotel rooftop spaces shaking up crafty cocktails and delicious meals.",
+    },
+    {
+      $Img: "https://dayuse.twic.pics/new-brand-hotel-highlight-icon/wow.png?twic=v1/cover=48/quality=75",
+      $Text:
+        "YOBOT is the handy helper during your stay as the world’s first robotic luggage concierge.",
+    },
+  ];
+
+  const [Details] = useState($Details);
   return (
     <div className=" flex my-6 lg:flex-row flex-col text-start gap-6">
       <div className={$div}>
         <h2 className={$title}>We're liking this</h2>
         <ul className=" flex flex-col gap-3">
-          <li className={$list}>
-            <img
-              src="https://dayuse.twic.pics/new-brand-hotel-highlight-icon/room.png?twic=v1/cover=48/quality=75"
-              alt=""
-              className={$img}
-            />
-            <p className={$text}>
-              Get cozy in your super comfy room with the ability to play music
-              in your soothing Monsoon shower, a heated shower rack and a
-              snuggly bed to relax.
-            </p>
-          </li>
-          <li className={$list}>
-            <img
-              src="https://dayuse.twic.pics/new-brand-hotel-highlight-icon/bar.png?twic=v1/cover=48/quality=75"
-              alt=""
-              className={$img}
-            />
-            <p className={$text}>
-              Head up high to one of the city’s largest hotel rooftop spaces
-              shaking up crafty cocktails and delicious meals.
-            </p>
-          </li>
-          <li className={$list}>
-            <img
-              src="https://dayuse.twic.pics/new-brand-hotel-highlight-icon/wow.png?twic=v1/cover=48/quality=75"
-              alt=""
-              className={$img}
-            />
-            <p className={$text}>
-              YOBOT is the handy helper during your stay as the world’s first
-              robotic luggage concierge.
-            </p>
-          </li>
+          {Details.map((Detail) => (
+            <li className={$list}>
+              <img src={Detail.$Img} alt="" className={$img} />
+              <p className={$text}>{Detail.$Text}</p>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={$div}>
