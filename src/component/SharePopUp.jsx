@@ -9,18 +9,22 @@ function SharePopUp({ show, onCloseShow }) {
     "flex gap-3 whitespace-nowrap w-full items-center text-left cursor-pointer text-base/4";
   const $SocialIcon = [
     {
+      id: 11,
       $icon: <FaFacebookF />,
       $sName: "Share on Facebook",
     },
     {
+      id: 12,
       $icon: <FaTwitter />,
       $sName: "Share on Twitter",
     },
     {
+      id: 13,
       $icon: <MdEmail />,
       $sName: "Share by email",
     },
     {
+      id: 14,
       $icon: <IoIosCopy />,
       $sName: "Copy link",
     },
@@ -29,7 +33,7 @@ function SharePopUp({ show, onCloseShow }) {
   const [SocialIcon] = useState($SocialIcon);
   return (
     <div
-      className={`flex justify-center items-center fixed md:absolute inset-0 w-full z-10 transition-colors ${
+      className={`flex justify-center items-center fixed md:absolute inset-0 w-full z-40 transition-colors ${
         show ? "visible  md:bg-transparent bg-black/50 " : "invisible"
       }`}
       onClick={onCloseShow}

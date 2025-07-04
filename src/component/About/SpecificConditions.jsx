@@ -1,5 +1,4 @@
 import { LuWallet } from "react-icons/lu";
-
 import { GrStorage } from "react-icons/gr";
 
 function SpecificConditions() {

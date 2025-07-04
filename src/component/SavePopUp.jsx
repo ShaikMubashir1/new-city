@@ -6,7 +6,7 @@ function SavePopUp({ open, onClose }) {
     "flex justify-center items-center text-black rounded-full px-14 cursor-pointer h-[52px] ";
   return (
     <div
-      className={`flex justify-center items-center fixed inset-0 w-full z-10 transition-colors ${
+      className={`flex justify-center items-center fixed inset-0 w-full z-30 transition-colors ${
         open ? "visible bg-black/50" : "invisible"
       }`}
       onClick={onClose}
@@ -22,7 +22,7 @@ function SavePopUp({ open, onClose }) {
         <div className=" flex justify-center ">
           <img src={LogoImg} alt="LogoImg" className="h-[190px] w-[190px]" />
         </div>
-        <div className="text-lg font-semibold mb-8">
+        <div className="text-lg font-semibold mb-8 text-black">
           Added to your favourites
         </div>
         <div className="mb-3">

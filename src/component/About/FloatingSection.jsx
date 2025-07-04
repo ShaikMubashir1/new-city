@@ -1,21 +1,11 @@
-import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import { BsSend } from "react-icons/bs";
-import { CiHeart } from "react-icons/ci";
-import { FcLike } from "react-icons/fc";
 import { RiAppsFill } from "react-icons/ri";
-import SharePopUp from "./SharePopUp";
-import SavePopUp from "./SavePopUp";
+import ShareBtn from "../ShareBtn";
+import LikeBtn from "../LikeBtn";
 
 function FloatingSection() {
-  const [open, setOpen] = useState(false);
-  const [change, setChange] = useState(false);
-  const [show, setShow] = useState(false);
-
-  const $btn =
-    " flex justify-center bg-white md:py-3 md:px-5 p-2 rounded-full text-xs h-fit font-medium hover:text-violet-400 gap-1 md:shadow-none shadow-3xl items-start";
   return (
-    <div className=" shadow-3xl sticky top-20 float-right p-6 rounded-2xl w-full">
+    <div className=" shadow-3xl sticky top-20 float-right p-6 rounded-2xl w-full z-20">
       <h2 className="font-bold text-2xl text-black mb-4 line-clamp-3">
         YOTEL New York Times Square
       </h2>
@@ -28,34 +18,9 @@ function FloatingSection() {
         </span>
         <div className="relative flex">
           <div className="flex gap-x-3 md:gap-x-0 ">
-            <div className=" relative">
-              <button
-                className={`${$btn}`}
-                onClick={() => {
-                  setShow(!show);
-                }}
-              >
-                <BsSend className="w-4 h-4" />
-                <span className=" hidden md:block"> Share</span>
-              </button>
-              <SharePopUp show={show} onCloseShow={() => setShow(false)} />
-            </div>
-            <button
-              className={$btn}
-              onClick={() => {
-                setOpen(!change);
-                setChange(!change);
-              }}
-            >
-              {change ? (
-                <FcLike className="w-4 h-4" />
-              ) : (
-                <CiHeart className="w-4 h-4" />
-              )}
-              <span className=" hidden md:block"> Save</span>
-            </button>
+            <ShareBtn />
+            <LikeBtn />
           </div>
-          <SavePopUp open={open} onClose={() => setOpen(false)} />
         </div>
       </div>
       <div className="relative w-full mb-5 ">

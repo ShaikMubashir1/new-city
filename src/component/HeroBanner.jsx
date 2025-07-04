@@ -4,8 +4,8 @@ export default function HeroBanner() {
   const $img =
     "object-cover m-auto cursor-pointer rounded-2xl h-[213px] w-full";
   return (
-    <div className=" flex ">
-      <div className="hidden w-full md:block lg:w-2/3 relative h-[450px]">
+    <div className=" flex relative order-1">
+      <div className=" hidden w-full md:block lg:w-2/3 relative h-[450px]">
         <img
           src="https://dayuse.twic.pics/hotels/16035/47bfabad18150d65a6bfc738c14f0829-yotel-new-york-city.jpg?twic=v1/cover=1200/quality=75"
           alt=""
@@ -23,11 +23,11 @@ export default function HeroBanner() {
           alt=""
           className={$img}
         />
-        <button className="flex justify-center select-none items-center text-black bg-white cursor-pointer  rounded-full py-3 px-5 absolute gap-x-1 bottom-4 right-4 p-3 font-medium text-xs/3 hover:bg-slate-100 ">
+      </div>
+        <button className=" justify-center select-none items-center text-black bg-white cursor-pointer  rounded-full py-3 px-5 absolute gap-x-1 bottom-4 right-4 p-3 font-medium text-xs/3 hover:bg-slate-100 hidden md:flex ">
           <RiAppsFill className="h-4 w-4" />
           See photos
         </button>
-      </div>
     </div>
   );
 }
